@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Palatial Celebration — Newport, RI — Regalia Palatial Estate & Venues</title>
+  <meta name="description" content="Interactive 9-step booking journey with live calculations in USD ($), hall selection, and Newport calendar check.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Book Your Palatial Celebration — Newport, RI — Regalia Palatial Estate, Newport RI">
+  <meta property="og:description" content="Interactive 9-step booking journey with live calculations in USD ($), hall selection, and Newport calendar check.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/uploads/general/og-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Regalia Custom Stylesheets (Strict 3-Colour & 2-Font) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  
+</head>
+<body>
+
+
+  <!-- Mandatory Public Header with Perfect Alignment -->
+  <header class="regalia-header">
+    <div class="container-full-padded">
+      <div class="regalia-header-inner">
+        <!-- Brand Logo on Left -->
+        <a href="index.html" class="regalia-brand">
+          <img class="brand-mark" src="assets/images/logo-mark.svg" alt="" width="44" height="44"><span class="brand-text"><span class="brand-name">REGALIA</span>
+          <span class="brand-tagline">Estate & Palatial Venues • Newport, RI</span></span>
+        </a>
+
+        <!-- Primary Navigation with Home Dropdown: Home | Book Now | Services | Gallery | About | Contact -->
+        <nav aria-label="Primary Navigation">
+          <ul class="regalia-nav">
+            <!-- Home with Dropdown (Home 1 and Home 2) -->
+            <li class="nav-item nav-item-dropdown">
+              <a href="index.html" class="regalia-nav-link">
+                Home <i class="bi bi-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li>
+                  <a href="index.html" class="nav-dropdown-item">
+                    <span>Home 1 — Grand Luxury Estate</span>
+                    <i class="bi bi-arrow-right small text-muted"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="index-2.html" class="nav-dropdown-item">
+                    <span>Home 2 — Celebrations & Galas</span>
+                    <i class="bi bi-arrow-right small text-muted"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="booking.html" class="regalia-nav-link active" aria-current="page">Book Now</a>
+            </li>
+
+            <li class="nav-item nav-item-dropdown">
+              <a href="services.html" class="regalia-nav-link">
+                Services <i class="bi bi-chevron-down nav-chevron"></i>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="services.html" class="nav-dropdown-item"><span>All Celebration Services</span><i class="bi bi-arrow-right small text-muted"></i></a></li>
+                <li><a href="halls.html" class="nav-dropdown-item"><span>Explore Palatial Ballrooms</span><i class="bi bi-arrow-right small text-muted"></i></a></li>
+                <li><a href="packages.html" class="nav-dropdown-item"><span>Celebration Packages</span><i class="bi bi-arrow-right small text-muted"></i></a></li>
+                <li><a href="pricing.html" class="nav-dropdown-item"><span>Pricing & Capacities</span><i class="bi bi-arrow-right small text-muted"></i></a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="gallery.html" class="regalia-nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="regalia-nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="regalia-nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions: Tools, Login, Book Now CTA -->
+        <div class="regalia-header-actions">
+          <!-- Dark/Light Theme Toggle -->
+          <button type="button" class="icon-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          
+          <!-- RTL Toggle Button -->
+          <button type="button" class="icon-action-btn rtl-toggle-btn" aria-label="Toggle RTL Direction">
+            <span class="dir-label" style="font-size: 0.75rem; font-weight: 600;">RTL</span>
+          </button>
+
+          <!-- Account / Portal Login Link -->
+          <a href="login.html" class="icon-action-btn" title="Client / Staff Portal" aria-label="Portal Login">
+            <i class="bi bi-person"></i>
+          </a>
+
+          <!-- Prominent Book Now Action Button with Stripe-like hover -->
+          <a href="booking.html" class="btn-regalia btn-regalia-primary d-none d-md-inline-flex">
+            <span>Reserve Date</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-nav-toggle" aria-label="Open Navigation Drawer">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <div class="mobile-nav-drawer">
+    <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+      <div class="regalia-brand">
+        <img class="brand-mark" src="assets/images/logo-mark.svg" alt="" width="44" height="44"><span class="brand-text"><span class="brand-name" style="font-size: 1.4rem;">REGALIA</span>
+        <span class="brand-tagline">Newport, Rhode Island</span></span>
+      </div>
+      <button type="button" class="mobile-nav-close btn border-0 p-0 text-dark fs-3">&times;</button>
+    </div>
+    <nav class="mobile-nav-menu" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-sub">
+        <div class="mobile-nav-row">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <button type="button" class="mobile-nav-expand" aria-expanded="false" aria-controls="mobileSubHome" aria-label="Toggle Home submenu"><i class="bi bi-chevron-down"></i></button>
+        </div>
+        <div class="mobile-nav-sub" id="mobileSubHome">
+          <ul>
+              <li><a href="index.html" class="mobile-nav-sublink"><span>Home 1 — Grand Luxury Estate</span><i class="bi bi-arrow-right"></i></a></li>
+              <li><a href="index-2.html" class="mobile-nav-sublink"><span>Home 2 — Celebrations &amp; Galas</span><i class="bi bi-arrow-right"></i></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-row"><a href="booking.html" class="mobile-nav-link mobile-nav-link-strong active" aria-current="page">Book Now</a></div>
+      </li>
+      <li class="mobile-nav-item has-sub">
+        <div class="mobile-nav-row">
+          <a href="services.html" class="mobile-nav-link">Services</a>
+          <button type="button" class="mobile-nav-expand" aria-expanded="false" aria-controls="mobileSubServices" aria-label="Toggle Services submenu"><i class="bi bi-chevron-down"></i></button>
+        </div>
+        <div class="mobile-nav-sub" id="mobileSubServices">
+          <ul>
+              <li><a href="services.html" class="mobile-nav-sublink"><span>All Celebration Services</span><i class="bi bi-arrow-right"></i></a></li>
+              <li><a href="halls.html" class="mobile-nav-sublink"><span>Explore Palatial Ballrooms</span><i class="bi bi-arrow-right"></i></a></li>
+              <li><a href="packages.html" class="mobile-nav-sublink"><span>Celebration Packages</span><i class="bi bi-arrow-right"></i></a></li>
+              <li><a href="pricing.html" class="mobile-nav-sublink"><span>Pricing &amp; Capacities</span><i class="bi bi-arrow-right"></i></a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-row"><a href="gallery.html" class="mobile-nav-link">Gallery</a></div>
+      </li>
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-row"><a href="about.html" class="mobile-nav-link">About</a></div>
+      </li>
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-row"><a href="contact.html" class="mobile-nav-link">Contact</a></div>
+      </li>
+    </ul>
+  </nav>
+  <div class="mt-auto pt-3 border-top d-flex flex-column gap-2">
+      <a href="client-dashboard/index.html" class="btn-regalia btn-regalia-outline w-100 text-center">Client Dashboard</a>
+      <a href="admin/index.html" class="btn-regalia btn-regalia-dark w-100 text-center">Admin Portal</a>
+    </div>
+  </div>
+
+
+<section class="section-full-sm page-banner" style="background-image: url('assets/images/uploads/banners/booking-banner.jpg'); background-color: var(--color-black); color: var(--color-ivory);">
+  <div class="container-full-padded text-center">
+    <span class="regalia-badge regalia-badge-dark">Newport Estate Reservation</span>
+    <h1 style="color: var(--color-ivory);">Curate Your Celebration Request</h1>
+    <div class="regalia-divider regalia-divider-center" style="background-color: var(--color-plum-light);"></div>
+    <p style="color: var(--color-ivory-dark); max-width: 680px; margin: 0 auto;">
+      Configure your auspicious celebration date, ballroom, guest seating, celebration package, and culinary options.
+    </p>
+  </div>
+</section>
+
+<section class="section-full" style="background-color: var(--color-ivory); padding-top: 40px;">
+  <div class="container-full-padded">
+    <div class="row g-4 booking-layout">
+      <div class="col-lg-8">
+        <div class="booking-wizard-container reveal-on-scroll">
+          <div class="wizard-steps-nav">
+            <div class="wizard-progress-bar"></div>
+            <div class="step-nav-item active" data-step="1"><div class="step-indicator">1</div><span class="step-nav-label">Event</span></div>
+            <div class="step-nav-item" data-step="2"><div class="step-indicator">2</div><span class="step-nav-label">Venue</span></div>
+            <div class="step-nav-item" data-step="3"><div class="step-indicator">3</div><span class="step-nav-label">Guests</span></div>
+            <div class="step-nav-item" data-step="4"><div class="step-indicator">4</div><span class="step-nav-label">Date</span></div>
+            <div class="step-nav-item" data-step="5"><div class="step-indicator">5</div><span class="step-nav-label">Time</span></div>
+            <div class="step-nav-item" data-step="6"><div class="step-indicator">6</div><span class="step-nav-label">Package</span></div>
+            <div class="step-nav-item" data-step="7"><div class="step-indicator">7</div><span class="step-nav-label">Catering</span></div>
+            <div class="step-nav-item" data-step="8"><div class="step-indicator">8</div><span class="step-nav-label">Details</span></div>
+            <div class="step-nav-item" data-step="9"><div class="step-indicator">9</div><span class="step-nav-label">Review</span></div>
+          </div>
+
+          <form id="regalia-booking-wizard">
+            <!-- STEP 1 -->
+            <div class="wizard-step-pane active" id="step-pane-1">
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Step 1 — Select Event Type</h3>
+              <p class="text-muted small mb-4">Choose the nature of your celebration along Bellevue Avenue.</p>
+              <div class="row g-3">
+                <div class="col-sm-6 col-md-4">
+                  <div class="selectable-card event-type-card selected" data-value="Wedding Ceremony & Gala">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <i class="bi bi-heart fs-2 mb-2" style="color: var(--color-plum);"></i>
+                    <strong class="fs-6">Wedding</strong>
+                    <span class="small text-muted mt-1">Sacred ceremony & gala reception</span>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="selectable-card event-type-card" data-value="Wedding Reception Gala">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <i class="bi bi-cup-straw fs-2 mb-2" style="color: var(--color-plum);"></i>
+                    <strong class="fs-6">Reception</strong>
+                    <span class="small text-muted mt-1">Evening banquet & dancing</span>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="selectable-card event-type-card" data-value="Engagement & Sangeet">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <i class="bi bi-music-note-beamed fs-2 mb-2" style="color: var(--color-plum);"></i>
+                    <strong class="fs-6">Engagement Gala</strong>
+                    <span class="small text-muted mt-1">Ring ceremony & cocktail night</span>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="selectable-card event-type-card" data-value="Centennial Anniversary">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <i class="bi bi-balloon fs-2 mb-2" style="color: var(--color-plum);"></i>
+                    <strong class="fs-6">Anniversary</strong>
+                    <span class="small text-muted mt-1">Family milestone dinner</span>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="selectable-card event-type-card" data-value="Executive Corporate Conclave">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <i class="bi bi-briefcase fs-2 mb-2" style="color: var(--color-plum);"></i>
+                    <strong class="fs-6">Corporate</strong>
+                    <span class="small text-muted mt-1">Summits, awards & galas</span>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="selectable-card event-type-card" data-value="Private Exclusive Soirée">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <i class="bi bi-stars fs-2 mb-2" style="color: var(--color-plum);"></i>
+                    <strong class="fs-6">Private Soirée</strong>
+                    <span class="small text-muted mt-1">Exclusive society gatherings</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-4 pt-3 border-top">
+                <button type="button" class="btn-regalia btn-regalia-primary wizard-btn-next">
+                  <span>Continue to Ballroom</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="wizard-step-pane" id="step-pane-2">
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Step 2 — Select Ballroom</h3>
+              <p class="text-muted small mb-4">Choose your preferred Newport ballroom or lawn.</p>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="selectable-card venue-select-card selected" data-venue-id="hall-imperial">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <strong class="fs-6">Grand Imperial Ballroom</strong>
+                    <div class="text-muted small mt-1">500 – 1,500 Guests | 14,000 Sq Ft</div>
+                    <div class="mt-3 fw-bold" style="color: var(--color-plum);">Rental: $35,000</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="selectable-card venue-select-card" data-venue-id="hall-kohinoor">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <strong class="fs-6">Kohinoor Palatial Hall</strong>
+                    <div class="text-muted small mt-1">300 – 800 Guests | 9,500 Sq Ft</div>
+                    <div class="mt-3 fw-bold" style="color: var(--color-plum);">Rental: $28,000</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="selectable-card venue-select-card" data-venue-id="hall-courtyard">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <strong class="fs-6">Royal Courtyard & Pavilion</strong>
+                    <div class="text-muted small mt-1">200 – 600 Guests | 7,800 Sq Ft</div>
+                    <div class="mt-3 fw-bold" style="color: var(--color-plum);">Rental: $22,000</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="selectable-card venue-select-card" data-venue-id="hall-dynasty">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <strong class="fs-6">Dynasty Banquet Suite</strong>
+                    <div class="text-muted small mt-1">100 – 350 Guests | 4,500 Sq Ft</div>
+                    <div class="mt-3 fw-bold" style="color: var(--color-plum);">Rental: $18,000</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                <button type="button" class="btn-regalia btn-regalia-outline wizard-btn-prev"><i class="bi bi-arrow-left"></i><span>Back</span></button>
+                <button type="button" class="btn-regalia btn-regalia-primary wizard-btn-next"><span>Continue to Guests</span><i class="bi bi-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="wizard-step-pane" id="step-pane-3">
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Step 3 — Guest Attendance</h3>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <label class="form-label-regalia">Expected Number of Guests</label>
+                  <input type="number" id="wizard-guest-count" class="form-control-regalia" value="350" min="50" max="1500">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-regalia">Seating Configuration</label>
+                  <select id="wizard-seating-style" class="form-select-regalia">
+                    <option value="Round Royal Banquet">Round Royal Banquet (8-seater circular tables)</option>
+                    <option value="Grand Theatre Style">Grand Theatre Style (Auditorium rows)</option>
+                    <option value="Floating Cocktail Reception">Floating Cocktail Reception with Lounge Clusters</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                <button type="button" class="btn-regalia btn-regalia-outline wizard-btn-prev"><i class="bi bi-arrow-left"></i><span>Back</span></button>
+                <button type="button" class="btn-regalia btn-regalia-primary wizard-btn-next"><span>Continue to Date</span><i class="bi bi-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="wizard-step-pane" id="step-pane-4">
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Step 4 — Auspicious Date</h3>
+              <div class="mb-3">
+                <strong>Selected Date:</strong> <span id="selected-date-display" class="fw-bold" style="color: var(--color-plum);">Fri, Dec 18, 2026</span>
+              </div>
+              <div id="booking-calendar-mount"></div>
+              <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                <button type="button" class="btn-regalia btn-regalia-outline wizard-btn-prev"><i class="bi bi-arrow-left"></i><span>Back</span></button>
+                <button type="button" class="btn-regalia btn-regalia-primary wizard-btn-next"><span>Continue to Time Slot</span><i class="bi bi-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 5 -->
+            <div class="wizard-step-pane" id="step-pane-5">
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Step 5 — Time Slot</h3>
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="selectable-card timeslot-card selected" data-timeslot="Full Day Grand Gala (08:00 – 23:00)">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <i class="bi bi-clock-history fs-3" style="color: var(--color-plum);"></i>
+                    <strong class="fs-6 mt-2">Full Day Sovereign Access (08:00 AM – 11:00 PM)</strong>
+                    <span class="small text-muted">Complete estate exclusivity for preparations, ceremony, and gala reception</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                <button type="button" class="btn-regalia btn-regalia-outline wizard-btn-prev"><i class="bi bi-arrow-left"></i><span>Back</span></button>
+                <button type="button" class="btn-regalia btn-regalia-primary wizard-btn-next"><span>Continue to Packages</span><i class="bi bi-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 6 -->
+            <div class="wizard-step-pane" id="step-pane-6">
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Step 6 — Celebration Package</h3>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="selectable-card package-select-card selected" data-package-id="pkg-sovereign">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <strong class="fs-6">Royal Sovereign Wedding</strong>
+                    <div class="small text-muted mt-1">Full floral mandap/stage, chandelier lighting, 2 bridal suites.</div>
+                    <div class="mt-2 fw-bold" style="color: var(--color-plum);">$25,000</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="selectable-card package-select-card" data-package-id="pkg-reception">
+                    <div class="selected-check"><i class="bi bi-check-lg"></i></div>
+                    <strong class="fs-6">Imperial Reception</strong>
+                    <div class="small text-muted mt-1">Glamour stage, concert acoustics, valet concierge.</div>
+                    <div class="mt-2 fw-bold" style="color: var(--color-plum);">$19,000</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                <button type="button" class="btn-regalia btn-regalia-outline wizard-btn-prev"><i class="bi bi-arrow-left"></i><span>Back</span></button>
+                <button type="button" class="btn-regalia btn-regalia-primary wizard-btn-next"><span>Continue to Catering</span><i class="bi bi-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 7 -->
+            <div class="wizard-step-pane" id="step-pane-7">
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Step 7 — Dining & Add-ons</h3>
+              <div class="mb-4">
+                <div class="form-check p-3 border mb-2 bg-white">
+                  <input class="form-check-input catering-tier-radio" type="radio" name="cateringTier" id="cat-veg" value="grand-veg">
+                  <label class="form-check-label w-100" for="cat-veg">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span class="dietary-badge veg">Farm-to-Table</span>
+                        <strong class="d-block mt-1">Grand Botanical Farm-to-Table Feast</strong>
+                        <small class="text-muted">Organic New England heirloom produce & artisanal courses</small>
+                      </div>
+                      <div class="fw-bold" style="color: var(--color-plum);">$125 / Guest</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-check p-3 border bg-white">
+                  <input class="form-check-input catering-tier-radio" type="radio" name="cateringTier" id="cat-nonveg" value="imperial-nonveg" checked>
+                  <label class="form-check-label w-100" for="cat-nonveg">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span class="dietary-badge non-veg">Prime Reserve</span>
+                        <strong class="d-block mt-1">Imperial Multi-Cuisine Gourmet Reserve</strong>
+                        <small class="text-muted">Prime aged beef, Rhode Island sea bass, live salad & dessert bars</small>
+                      </div>
+                      <div class="fw-bold" style="color: var(--color-plum);">$165 / Guest</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                <button type="button" class="btn-regalia btn-regalia-outline wizard-btn-prev"><i class="bi bi-arrow-left"></i><span>Back</span></button>
+                <button type="button" class="btn-regalia btn-regalia-primary wizard-btn-next"><span>Continue to Host Details</span><i class="bi bi-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 8 -->
+            <div class="wizard-step-pane" id="step-pane-8">
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Step 8 — Host Information</h3>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label-regalia">Host Full Name *</label>
+                  <input type="text" id="cust-name" class="form-control-regalia" value="Alexander Kensington" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-regalia">Email Address *</label>
+                  <input type="email" id="cust-email" class="form-control-regalia" value="a.kensington@newportwealth.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-regalia">Phone / Mobile *</label>
+                  <input type="tel" id="cust-phone" class="form-control-regalia" value="+1 (401) 847-1920" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-regalia">Residence / City</label>
+                  <input type="text" id="cust-city" class="form-control-regalia" value="Newport, RI">
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4 pt-3 border-top">
+                <button type="button" class="btn-regalia btn-regalia-outline wizard-btn-prev"><i class="bi bi-arrow-left"></i><span>Back</span></button>
+                <button type="button" class="btn-regalia btn-regalia-primary wizard-btn-next"><span>Review Quotation</span><i class="bi bi-arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- STEP 9 -->
+            <div class="wizard-step-pane" id="step-pane-9">
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Step 9 — Review & Confirm Quotation</h3>
+              <div class="p-4 border bg-white mb-4">
+                <div class="row g-3">
+                  <div class="col-sm-6"><small class="text-muted text-uppercase fw-semibold">Ballroom</small><div class="fw-bold" id="rev-hall-name">Grand Imperial Ballroom</div></div>
+                  <div class="col-sm-6"><small class="text-muted text-uppercase fw-semibold">Celebration Date</small><div class="fw-bold" id="rev-event-date">Fri, Dec 18, 2026</div></div>
+                  <div class="col-sm-6"><small class="text-muted text-uppercase fw-semibold">Attendance</small><div class="fw-bold" id="rev-guests">350 Guests</div></div>
+                  <div class="col-sm-6"><small class="text-muted text-uppercase fw-semibold">Advance Required (25%)</small><div class="fw-bold fs-5" style="color: var(--color-plum);" id="rev-advance">$29,350</div></div>
+                </div>
+              </div>
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="agree-terms" checked>
+                <label class="form-check-label small" for="agree-terms">
+                  I acknowledge this submission is a formal date inquiry. Regalia estate concierge will verify date exclusivity and issue a formal agreement.
+                </label>
+              </div>
+              <div class="d-flex justify-content-between pt-3 border-top">
+                <button type="button" class="btn-regalia btn-regalia-outline wizard-btn-prev"><i class="bi bi-arrow-left"></i><span>Back</span></button>
+                <button type="button" id="wizard-btn-submit" class="btn-regalia btn-regalia-primary btn-regalia-lg">
+                  <span>Submit Reservation Request</span>
+                  <i class="bi bi-send-check"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Live Sidebar -->
+      <div class="col-lg-4">
+        <div class="booking-summary-card reveal-on-scroll" data-reveal-delay="200">
+          <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Quotation Summary</h4>
+          <span class="badge-status badge-status-pending mb-3">USD ($) Live Estimates</span>
+
+          <div class="summary-item-row"><span class="text-muted">Event:</span><strong id="sum-event-type">Wedding</strong></div>
+          <div class="summary-item-row"><span class="text-muted">Ballroom:</span><strong id="sum-venue-name">Grand Imperial</strong></div>
+          <div class="summary-item-row"><span class="text-muted">Date:</span><strong id="sum-event-date">Dec 18, 2026</strong></div>
+          <div class="summary-item-row"><span class="text-muted">Guests:</span><strong id="sum-guest-count">350 Guests</strong></div>
+          <div class="summary-item-row"><span class="text-muted">Package:</span><strong id="sum-package-name" class="small">Royal Sovereign</strong></div>
+          <div class="summary-item-row"><span class="text-muted">Catering:</span><strong id="sum-catering-tier" class="small">Imperial Gourmet</strong></div>
+
+          <hr style="border-color: var(--border-medium); margin: 1rem 0;">
+
+          <div class="summary-item-row"><span>Base Ballroom Rental:</span><span id="sum-venue-price">$35,000</span></div>
+          <div class="summary-item-row"><span>Celebration Package:</span><span id="sum-package-price">$25,000</span></div>
+          <div class="summary-item-row"><span>Catering Subtotal:</span><span id="sum-catering-price">$57,750</span></div>
+          <div class="summary-item-row"><span>Culinary Add-ons:</span><span id="sum-addons-price">$5,000</span></div>
+          <div class="summary-item-row"><span>State Luxury Tax (9%):</span><span id="sum-tax-price">$11,048</span></div>
+          <div class="summary-item-row total-row"><span>Estimated Total:</span><span id="sum-total-price">$133,798</span></div>
+          <div class="summary-item-row summary-advance-row" style="background: var(--color-plum-subtle); padding: 0.7rem 0.75rem; border-bottom: none;">
+            <strong style="color: var(--color-plum);">Advance Due (25%):</strong>
+            <strong style="color: var(--color-plum);" id="sum-advance-price">$33,450</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Regalia Palatial Footer (American Estate Details) -->
+  <footer class="regalia-footer section-full-sm">
+    <div class="container-full-padded">
+      <div class="row g-5">
+        <!-- Col 1: Brand & Philosophy -->
+        <div class="col-lg-4 col-md-6">
+          <div class="regalia-brand mb-3">
+            <img class="brand-mark" src="assets/images/logo-mark.svg" alt="" width="44" height="44"><span class="brand-text"><span class="brand-name" style="color: var(--color-ivory);">REGALIA</span>
+            <span class="brand-tagline" style="color: var(--color-ivory-dark);">Estate & Palatial Venues • Newport, RI</span></span>
+          </div>
+          <p style="color: var(--color-ivory-dark); font-size: 0.92rem; line-height: 1.8;">
+            A sanctuary of historic American luxury, Gilded Age architecture, and bespoke hospitality along Newport's iconic Bellevue Avenue. Dedicated to grand society weddings, state galas, and milestone family assemblies.
+          </p>
+          <div class="social-links mt-4">
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-widget-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home 1 — Estate</a></li>
+            <li><a href="index-2.html" class="footer-link">Home 2 — Galas</a></li>
+            <li><a href="halls.html" class="footer-link">Grand Ballrooms</a></li>
+            <li><a href="services.html" class="footer-link">Curated Services</a></li>
+            <li><a href="packages.html" class="footer-link">Celebration Tiers</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Guest Concierge -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-widget-title">Estate Portals</h4>
+          <ul class="footer-links">
+            <li><a href="booking.html" class="footer-link">Reserve a Date</a></li>
+            <li><a href="client-dashboard/index.html" class="footer-link">Client Dashboard</a></li>
+            <li><a href="admin/index.html" class="footer-link">Admin Portal</a></li>
+            <li><a href="faq.html" class="footer-link">Reservation FAQ</a></li>
+            <li><a href="about.html" class="footer-link">Estate Heritage</a></li>
+            <li><a href="contact.html" class="footer-link">Private Appointments</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Newsletter -->
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-widget-title">Newport Estate Concierge</h4>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <span>742 Bellevue Avenue, Newport, Rhode Island 02840, United States</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <span>+1 (401) 847-9200 &nbsp;|&nbsp; Toll-Free: +1 (800) 542-7342</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope"></i>
+            <span>concierge@regaliaestates.com</span>
+          </div>
+
+          <div class="mt-4">
+            <h6 style="color: var(--color-ivory); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase;">The Newport Gazette Subscription</h6>
+            <form class="newsletter-form mt-2 d-flex">
+              <input type="email" class="form-control-regalia" placeholder="Enter your email" required style="height: 44px; font-size: 0.85rem;">
+              <button type="submit" class="btn-regalia btn-regalia-primary" style="padding: 0 1.25rem;">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Regalia Estate & Palatial Venues LLC. Bellevue Avenue, Newport, RI. All Rights Reserved.
+        </div>
+        <div class="d-flex gap-4">
+          <a href="faq.html" class="footer-link">Terms & Policies</a>
+          <a href="contact.html" class="footer-link">Private Tour Protocol</a>
+          <a href="sitemap.xml" class="footer-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Mount -->
+  <div class="regalia-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged Venue Image">
+    <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-nav-btn lightbox-prev" aria-label="Previous Image"><i class="bi bi-chevron-left"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="Enlarged Venue View">
+    </div>
+    <button class="lightbox-nav-btn lightbox-next" aria-label="Next Image"><i class="bi bi-chevron-right"></i></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calendar.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>
