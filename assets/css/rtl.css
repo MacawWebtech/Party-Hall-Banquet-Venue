@@ -1,0 +1,112 @@
+/* ==========================================================================
+   REGALIA — Right-to-Left (RTL) Layout Stylesheet
+   Strict RTL Mirroring for Arabic & Hebrew Support
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* Navigation & Dropdowns */
+[dir="rtl"] .nav-dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .nav-dropdown-item:hover {
+  padding-left: 1.4rem;
+  padding-right: 1.7rem;
+}
+
+[dir="rtl"] .regalia-nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+/* Icons direction reversal */
+[dir="rtl"] .bi-chevron-right,
+[dir="rtl"] .bi-arrow-right {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+[dir="rtl"] .bi-chevron-left,
+[dir="rtl"] .bi-arrow-left {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Hall Card Capacity Pill */
+[dir="rtl"] .hall-card-capacity-pill {
+  right: auto;
+  left: 14px;
+}
+
+/* Selectable Cards Selected Checkmark */
+[dir="rtl"] .selectable-card .selected-check {
+  right: auto;
+  left: 12px;
+}
+
+/* Booking Wizard Progress Bar: positioned with logical properties, flips automatically */
+
+/* Dashboard Sidebar Flipping */
+[dir="rtl"] .dashboard-sidebar {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1px solid rgba(84, 38, 75, 0.4);
+}
+
+[dir="rtl"] .dashboard-main {
+  margin-left: 0;
+  margin-right: 280px;
+}
+
+[dir="rtl"] .sidebar-badge {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .topbar-search i {
+  left: auto;
+  right: 0.9rem;
+}
+
+[dir="rtl"] .topbar-search input {
+  padding-left: 1.2rem;
+  padding-right: 2.3rem;
+}
+
+[dir="rtl"] .table-regalia th,
+[dir="rtl"] .table-regalia td {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-link:hover {
+  padding-left: 0;
+  padding-right: 6px;
+}
+
+[dir="rtl"] .mobile-nav-drawer {
+  right: auto;
+  left: -320px;
+  border-left: none;
+  border-right: 1px solid var(--border-light);
+  transition: left var(--transition-normal);
+  box-shadow: 10px 0 30px rgba(23, 20, 25, 0.15);
+}
+
+[dir="rtl"] .mobile-nav-drawer.active {
+  left: 0;
+  right: auto;
+}

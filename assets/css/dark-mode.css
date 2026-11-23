@@ -1,0 +1,381 @@
+/* ==========================================================================
+   REGALIA — Dark Mode Stylesheet
+   Strict 3-Colour Palette:
+     - Obsidian Black: #171419 (Dark Base & Surfaces)
+     - Warm Ivory:     #F6F0E7 (Light Text & Accents)
+     - Royal Plum:     #54264B (Brand Primary & Accents)
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --bg-primary: #171419;
+  --bg-secondary: #1f1b22;
+  --bg-surface: #242027;
+  --bg-dark-surface: #121014;
+
+  --text-primary: #F6F0E7;
+  --text-secondary: rgba(246, 240, 231, 0.72);
+  --text-inverse: #171419;
+
+  --border-light: rgba(246, 240, 231, 0.12);
+  --border-medium: rgba(246, 240, 231, 0.22);
+  --border-dark: rgba(246, 240, 231, 0.3);
+
+  --color-plum-subtle: rgba(84, 38, 75, 0.28);
+  --color-plum-border: rgba(110, 51, 98, 0.5);
+  --color-black-subtle: rgba(246, 240, 231, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.65);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .regalia-header {
+  background-color: rgba(23, 20, 25, 0.94);
+  border-bottom-color: var(--border-light);
+}
+
+[data-theme="dark"] .regalia-header.scrolled {
+  background-color: rgba(23, 20, 25, 0.98);
+}
+
+[data-theme="dark"] .regalia-nav-link {
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .regalia-brand .brand-name {
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .regalia-brand .brand-tagline {
+  color: var(--color-ivory-dark);
+}
+
+[data-theme="dark"] .icon-action-btn {
+  color: var(--color-ivory);
+  border-color: var(--border-light);
+}
+
+[data-theme="dark"] .nav-dropdown-menu {
+  background-color: var(--bg-surface);
+  border-color: var(--border-light);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.65);
+}
+
+[data-theme="dark"] .nav-dropdown-menu::before {
+  background-color: var(--bg-surface);
+  border-color: var(--border-light);
+}
+
+[data-theme="dark"] .nav-dropdown-item {
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .hall-card,
+[data-theme="dark"] .service-editorial-card,
+[data-theme="dark"] .package-card,
+[data-theme="dark"] .booking-wizard-container,
+[data-theme="dark"] .calendar-widget,
+[data-theme="dark"] .catering-addon-item,
+[data-theme="dark"] .selectable-card,
+[data-theme="dark"] .dashboard-topbar,
+[data-theme="dark"] .stat-kpi-card,
+[data-theme="dark"] .dashboard-panel,
+[data-theme="dark"] .accordion-regalia .accordion-item {
+  background-color: var(--bg-surface);
+  border-color: var(--border-light);
+}
+
+[data-theme="dark"] .hall-card-title,
+[data-theme="dark"] .panel-title,
+[data-theme="dark"] .calendar-month-title,
+[data-theme="dark"] .accordion-regalia .accordion-button {
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .form-control-regalia,
+[data-theme="dark"] .form-select-regalia {
+  background-color: #1a171d;
+  border-color: var(--border-medium);
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .form-label-regalia {
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .table-regalia th {
+  background-color: rgba(246, 240, 231, 0.05);
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .table-regalia td {
+  color: var(--text-secondary);
+  border-bottom-color: var(--border-light);
+}
+
+[data-theme="dark"] .booking-summary-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-medium);
+}
+
+[data-theme="dark"] .mobile-nav-drawer {
+  background-color: var(--color-black);
+  border-left-color: var(--border-light);
+}
+
+[data-theme="dark"] .mobile-nav-toggle {
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .filter-btn {
+  color: var(--color-ivory);
+  border-color: var(--border-light);
+}
+
+/* ==========================================================================
+   Dark Mode — Text Visibility Fixes
+   Elements below hard-code Obsidian Black / Royal Plum text colours that
+   disappear on dark surfaces. Only the text colour is overridden here.
+   ========================================================================== */
+
+/* Plain links (zero-specificity scope so button/nav classes still win) */
+:where([data-theme="dark"]) a {
+  color: var(--color-ivory);
+}
+
+:where([data-theme="dark"]) a:hover {
+  color: var(--color-ivory-dark);
+}
+
+/* Primary text (was Obsidian Black) */
+[data-theme="dark"] .nav-dropdown-item,
+[data-theme="dark"] .mobile-nav-toggle,
+[data-theme="dark"] .icon-action-btn,
+[data-theme="dark"] .filter-btn,
+[data-theme="dark"] .form-label-regalia,
+[data-theme="dark"] .form-control-regalia,
+[data-theme="dark"] .form-select-regalia,
+[data-theme="dark"] .calendar-month-title,
+[data-theme="dark"] .dietary-badge.non-veg,
+[data-theme="dark"] .accordion-regalia .accordion-button,
+[data-theme="dark"] .alert-regalia.info,
+[data-theme="dark"] .sidebar-toggle-btn,
+[data-theme="dark"] .user-profile-btn,
+[data-theme="dark"] .panel-title,
+[data-theme="dark"] .table-regalia th,
+[data-theme="dark"] .btn-action-icon,
+[data-theme="dark"] .hall-card-title {
+  color: var(--color-ivory);
+}
+
+/* Secondary / muted text (was muted Obsidian Black) */
+[data-theme="dark"] .regalia-brand .brand-tagline,
+[data-theme="dark"] .spec-item,
+[data-theme="dark"] .price-label,
+[data-theme="dark"] .form-control-regalia::placeholder,
+[data-theme="dark"] .step-indicator,
+[data-theme="dark"] .step-nav-label,
+[data-theme="dark"] .calendar-grid-header,
+[data-theme="dark"] .calendar-day-cell.status-booked,
+[data-theme="dark"] .calendar-legend,
+[data-theme="dark"] .badge-status-cancelled,
+[data-theme="dark"] .topbar-search i,
+[data-theme="dark"] .stat-kpi-label,
+[data-theme="dark"] .stat-kpi-subtext {
+  color: var(--text-secondary);
+}
+
+/* Accent text (was Royal Plum) */
+[data-theme="dark"] .btn-regalia-outline,
+[data-theme="dark"] .regalia-badge,
+[data-theme="dark"] .regalia-nav-link:hover,
+[data-theme="dark"] .regalia-nav-link.active,
+[data-theme="dark"] .nav-dropdown-item:hover,
+[data-theme="dark"] .icon-action-btn:hover,
+[data-theme="dark"] .spec-item i,
+[data-theme="dark"] .price-value,
+[data-theme="dark"] .service-icon-box,
+[data-theme="dark"] .package-price,
+[data-theme="dark"] .package-features-list li i,
+[data-theme="dark"] .step-nav-item.active .step-nav-label,
+[data-theme="dark"] .dietary-badge.veg,
+[data-theme="dark"] .summary-item-row.total-row,
+[data-theme="dark"] .badge-status-pending,
+[data-theme="dark"] .badge-status-tentative,
+[data-theme="dark"] .accordion-regalia .accordion-button:not(.collapsed),
+[data-theme="dark"] .alert-regalia,
+[data-theme="dark"] .stat-kpi-number,
+[data-theme="dark"] .stat-kpi-icon {
+  color: var(--color-ivory);
+}
+
+/* Accent text variable: Royal Plum in light mode, Warm Ivory in dark mode.
+   Used by inline `!important` accent text, which CSS cannot override. */
+[data-theme="dark"] {
+  --accent-text: var(--color-ivory);
+}
+
+/* Bootstrap utility text colours */
+[data-theme="dark"] .text-dark {
+  color: var(--color-ivory) !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+/* Bootstrap white / light boxes: use the dark surface so theme text stays readable */
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-light {
+  background-color: var(--bg-surface) !important;
+}
+
+/* Inline-styled sections/boxes that use an Ivory background */
+[data-theme="dark"] [style*="background-color: var(--color-ivory)"],
+[data-theme="dark"] [style*="background-color: var(--color-ivory-light)"] {
+  background-color: var(--bg-primary) !important;
+}
+
+/* Inline-styled text colours (Obsidian Black / Plum) */
+[data-theme="dark"] [style^="color: var(--color-black)"],
+[data-theme="dark"] [style*="; color: var(--color-black)"],
+[data-theme="dark"] [style^="color: var(--color-plum)"],
+[data-theme="dark"] [style*="; color: var(--color-plum)"] {
+  color: var(--color-ivory) !important;
+}
+
+[data-theme="dark"] [style^="color: var(--color-black-muted)"],
+[data-theme="dark"] [style*="; color: var(--color-black-muted)"] {
+  color: var(--text-secondary) !important;
+}
+
+/* ==========================================================================
+   Dark Mode — Button hover / contrast fixes
+   ========================================================================== */
+[data-theme="dark"] .btn-regalia-primary:hover,
+[data-theme="dark"] .btn-regalia-primary:focus-visible,
+[data-theme="dark"] .btn-regalia-outline:hover,
+[data-theme="dark"] .btn-regalia-outline:focus-visible {
+  background-color: var(--color-plum-light);
+  border-color: var(--color-plum-light);
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .btn-regalia-outline {
+  border-color: var(--color-plum-light);
+}
+
+[data-theme="dark"] .btn-regalia-dark {
+  background-color: var(--bg-surface);
+  border-color: var(--border-dark);
+  color: var(--color-ivory);
+}
+
+[data-theme="dark"] .btn-regalia-dark:hover {
+  background-color: var(--color-plum);
+  border-color: var(--color-plum);
+  color: var(--color-ivory);
+}
+
+/* Active menu states (dark) */
+[data-theme="dark"] .nav-dropdown-item.active,
+[data-theme="dark"] .nav-dropdown-item.active i {
+  color: var(--color-ivory) !important;
+}
+[data-theme="dark"] .nav-dropdown-item.active,
+[data-theme="dark"] .mobile-nav-row:has(> .mobile-nav-link.active),
+[data-theme="dark"] .mobile-nav-sublink.active {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .nav-dropdown-item.active::before,
+[data-theme="dark"] .mobile-nav-row:has(> .mobile-nav-link.active)::before {
+  background-color: var(--accent-text, var(--color-ivory));
+}
+[data-theme="dark"] .mobile-nav-sublink.active {
+  border-inline-start-color: var(--accent-text, var(--color-ivory));
+}
+
+/* ==========================================================================
+   Dark Mode — Stacked ballroom cards (tablet + mobile) & hall spec tiles
+   Card surface was hard-coded white, hiding ivory values. Use dark surface.
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  [data-theme="dark"] .table-stack-regalia tbody tr {
+    background: var(--bg-surface);
+    border-color: var(--border-medium);
+  }
+  [data-theme="dark"] .table-stack-regalia td {
+    color: var(--color-ivory);
+    border-bottom-color: var(--border-light);
+  }
+  [data-theme="dark"] .table-stack-regalia td::before {
+    color: var(--text-secondary);
+  }
+  [data-theme="dark"] .table-stack-regalia td:first-child {
+    background: var(--color-plum-subtle);
+    color: var(--color-ivory);
+  }
+  [data-theme="dark"] .table-stack-regalia td strong {
+    color: var(--color-ivory) !important;
+  }
+}
+[data-theme="dark"] .table-regalia td strong { color: var(--color-ivory) !important; }
+[data-theme="dark"] .hall-spec small { color: var(--text-secondary); }
+[data-theme="dark"] .hall-spec-value { color: var(--color-ivory); }
+
+/* ==========================================================================
+   Dark Mode — Contrast pass #2 (palette only: Obsidian Black, Warm Ivory, Royal Plum)
+   ========================================================================== */
+
+/* Table values (e.g. "850 Guests") — full ivory instead of 72% ivory */
+[data-theme="dark"] .table-regalia td,
+[data-theme="dark"] .table-regalia td strong,
+[data-theme="dark"] .table-regalia td a:not(.btn-regalia) {
+  color: var(--color-ivory) !important;
+}
+[data-theme="dark"] .table-regalia th {
+  color: var(--color-ivory);
+  background-color: rgba(246, 240, 231, 0.08);
+}
+
+/* "Our Mission" card — Royal Plum surface with Warm Ivory text */
+[data-theme="dark"] .vm-panel-light {
+  background: var(--color-plum);
+  border-color: var(--color-plum-light);
+  border-top-color: var(--color-ivory);
+}
+[data-theme="dark"] .vm-panel-light .vm-label { color: var(--color-ivory-dark); }
+[data-theme="dark"] .vm-panel-light h3 { color: var(--color-ivory); }
+[data-theme="dark"] .vm-panel-light p { color: var(--color-ivory); opacity: 0.9; }
+[data-theme="dark"] .vm-panel-light .vm-icon { background: var(--color-ivory); color: var(--color-plum); }
+[data-theme="dark"] .vm-panel-light .vm-points { border-top-color: rgba(246, 240, 231, 0.3); }
+[data-theme="dark"] .vm-panel-light .vm-points i { color: var(--color-ivory); }
+[data-theme="dark"] .vm-panel-light .vm-points span { color: var(--color-ivory); }
+/* "Our Vision" card sits on the same black as the page — give it a visible edge */
+[data-theme="dark"] .vm-panel-dark { border-color: var(--border-dark); }
+[data-theme="dark"] .vm-panel-dark .vm-icon { background: var(--color-plum); color: var(--color-ivory); }
+
+/* Other plum-on-dark text */
+[data-theme="dark"] .timeline-year,
+[data-theme="dark"] .values-num,
+[data-theme="dark"] .service-perk-title {
+  color: var(--color-ivory);
+}
+[data-theme="dark"] .timeline-card h4,
+[data-theme="dark"] .values-row h4 { color: var(--color-ivory); }
+[data-theme="dark"] .timeline-card p,
+[data-theme="dark"] .values-row p { color: var(--text-secondary); }
+
+/* ==========================================================================
+   Dark Mode — Contrast pass #3 (found by automated page-by-page contrast scan)
+   Royal Plum-light on Obsidian Black was ~2:1; Warm Ivory is ~14:1.
+   ========================================================================== */
+[data-theme="dark"] .vm-panel-dark .vm-label,
+[data-theme="dark"] .service-step-number,
+[data-theme="dark"] [style*="color: var(--color-plum-light)"] {
+  color: var(--color-ivory) !important;
+}
+[data-theme="dark"] .vm-panel-dark .vm-points i { color: var(--color-ivory); }

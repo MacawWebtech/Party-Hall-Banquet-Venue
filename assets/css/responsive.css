@@ -1,0 +1,509 @@
+/* ==========================================================================
+   REGALIA — Responsive Stylesheet
+   Breakpoints (match Bootstrap 5):
+     - Mobile:        below 576px
+     - Large mobile:  576px – 767px
+     - Tablet:        768px – 991px
+     - Small desktop: 992px – 1199px   (header already collapses to the drawer)
+     - Desktop:       1200px and up    (full navigation bar)
+   Page gutters: 30px on desktop/tablet, 18px on mobile.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Header collapses into the drawer below 1200px so the 6-item nav,
+   brand and action buttons never fight for the same row.
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+  .regalia-header-inner > nav,
+  .regalia-nav {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+  }
+}
+
+/* Between 1200 and 1399px the tagline would crowd the nav: tuck it away */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .regalia-header .brand-tagline {
+    display: none;
+  }
+}
+
+/* Tablet & below (<= 991px) */
+@media (max-width: 991.98px) {
+  /* "Reserve Date" lives in the drawer (Book Now) on these sizes */
+  .regalia-header-actions > .btn-regalia {
+    display: none !important;
+  }
+
+  .booking-summary-card {
+    position: static;
+  }
+
+  /* Paired large buttons stack at one shared width instead of two ragged ones */
+  .d-flex.flex-wrap:has(> .btn-regalia-lg + .btn-regalia-lg) {
+    flex-direction: column;
+    align-items: stretch;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .d-flex.flex-wrap:has(> .btn-regalia-lg + .btn-regalia-lg) > .btn-regalia {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .d-flex.justify-content-center.flex-wrap:has(> .btn-regalia-lg + .btn-regalia-lg) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .package-card.featured,
+  .package-card.featured:hover {
+    transform: none;
+  }
+
+  /* Tablet: size the banner to its content instead of 90% of the screen height */
+  .hero-editorial {
+    min-height: 0;
+    padding: 72px 0;
+  }
+}
+
+/* Below tablet (< 768px) */
+@media (max-width: 767.98px) {
+  .regalia-header .brand-tagline {
+    display: none;
+  }
+
+  /* Bootstrap's g-5 gutter (3rem) pulled rows outside the 18px mobile gutter */
+  .row.g-5,
+  .row.gx-5 {
+    --bs-gutter-x: 2rem;
+  }
+
+  .row.g-5,
+  .row.gy-5 {
+    --bs-gutter-y: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile (< 640px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 639.98px) {
+  :root {
+    --pad-desktop: 18px;
+  }
+
+  .container-full,
+  .container-full-padded {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section-full {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .section-full-sm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .regalia-header-inner {
+    height: 72px;
+    gap: 0.5rem;
+  }
+
+  .regalia-brand .brand-name {
+    font-size: 1.45rem;
+    letter-spacing: 0.1em;
+  }
+
+  .regalia-header-actions {
+    gap: 0.4rem;
+  }
+
+  .hero-editorial {
+    min-height: 80vh;
+    padding: 40px 0;
+  }
+
+  .btn-regalia {
+    padding: 0.8rem 1.4rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-regalia-lg {
+    padding: 1rem 1.5rem;
+    font-size: 0.92rem;
+    min-height: 52px;
+  }
+
+  /* Stacked call-to-action pairs go full width — only where they sit in a button row */
+  .d-flex.flex-wrap > .btn-regalia:not(.btn-regalia-sm),
+  .d-flex.flex-column > .btn-regalia {
+    flex: 1 1 100%;
+  }
+
+  .d-flex.flex-wrap:has(> .btn-regalia-lg + .btn-regalia-lg) {
+    width: 100%;
+  }
+
+  .calendar-days-grid {
+    gap: 3px;
+  }
+
+  .calendar-day-cell {
+    font-size: 0.78rem;
+  }
+
+  /* Footer keeps one consistent left edge on phones */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-bottom .d-flex {
+    justify-content: flex-start;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+
+  .regalia-footer {
+    text-align: left;
+  }
+}
+
+/* Booking wizard: Back / Continue buttons stack on small screens */
+@media (max-width: 575.98px) {
+  /* Back / Continue stacking is handled in components.css (.wizard-step-pane > .d-flex.border-top) */
+}
+
+/* Very small phones: keep the header controls on one row */
+@media (max-width: 380px) {
+  .icon-action-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    flex-basis: 36px;
+  }
+
+  .mobile-nav-toggle {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .regalia-header-actions {
+    gap: 0.3rem;
+  }
+
+  .regalia-brand .brand-name {
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 340px) {
+  .icon-action-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    flex-basis: 32px;
+  }
+
+  .regalia-brand .brand-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Touch devices: comfortable 44px tap targets on the controls that need them
+   (replaces the old blanket "a, button, input, select { min-height: 44px }"
+   rule, which stretched checkboxes, social icons and inline links).
+   -------------------------------------------------------------------------- */
+@media (pointer: coarse) {
+  .regalia-nav-link,
+  .nav-dropdown-item,
+  .sidebar-link,
+  .mobile-nav-drawer a {
+    min-height: 44px;
+  }
+
+  .footer-link {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+  }
+
+  .social-btn {
+    min-width: 44px;
+    min-height: 44px;
+    flex-basis: 44px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet (768px – 991px): card grids show two per row, so when a grid ends
+   with a single leftover card (e.g. the 3rd of 3) it is centred under the pair
+   at the same width as the cards above it. Form columns are not affected.
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .row > [class*="col-md-6"]:last-child:nth-child(odd):not(:first-child):has(> .hall-card, > .package-card, > .service-editorial-card, > .selectable-card, > .catering-addon-item, > .stat-kpi-card, > .dashboard-panel),
+  .row > [class*="col-sm-6"]:not([class*="col-md-"]):last-child:nth-child(odd):not(:first-child):has(> .hall-card, > .package-card, > .service-editorial-card, > .selectable-card, > .catering-addon-item, > .stat-kpi-card, > .dashboard-panel) {
+    margin-inline: auto;
+  }
+}
+
+/* Tablet: center the dining CTA buttons (View Full Dining Menus / Schedule Menu Tasting) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .dining-cta-row {
+    justify-content: center;
+    align-items: center;
+  }
+  .dining-cta-row .btn-regalia {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Tablet + mobile: Ballroom comparison table becomes stacked cards, one ballroom after another */
+@media (max-width: 991.98px) {
+  .table-regalia-wrap:has(.table-stack-regalia) {
+    overflow: visible;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+  }
+  .table-stack-regalia,
+  .table-stack-regalia tbody,
+  .table-stack-regalia tr,
+  .table-stack-regalia td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+  .table-stack-regalia thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .table-stack-regalia tbody tr {
+    background: #fff;
+    border: 1px solid var(--border-medium);
+    margin: 0 auto 1.25rem;
+    max-width: 640px;
+    padding: 0.35rem 0;
+  }
+  .table-stack-regalia tbody tr:last-child { margin-bottom: 0; }
+  .table-stack-regalia td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1.25rem;
+    text-align: right;
+    white-space: normal;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .table-stack-regalia tbody tr:last-child td { border-bottom: 1px solid var(--border-light); }
+  .table-stack-regalia td::before {
+    content: attr(data-label);
+    flex: 0 0 auto;
+    text-align: left;
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-black);
+  }
+  /* Ballroom name acts as the card title */
+  .table-stack-regalia td:first-child {
+    justify-content: center;
+    text-align: center;
+    background: var(--color-plum-subtle);
+    font-size: 1.05rem;
+  }
+  .table-stack-regalia td:first-child::before { display: none; }
+  /* Action button centered at the card foot */
+  .table-stack-regalia td:last-child {
+    justify-content: center;
+    border-bottom: 0;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+  }
+  .table-stack-regalia td:last-child::before { display: none; }
+  .table-stack-regalia td:last-child .btn-regalia { min-width: 160px; justify-content: center; }
+}
+
+/* Services cards: image on top when the card column is narrow (small desktop) or on phones */
+@media (max-width: 575.98px) {
+  .service-card { gap: 1.25rem; padding: 1.25rem; }
+  .service-card-media { height: 210px; }
+}
+
+/* Ballrooms page: stack feature cards on tablet and mobile */
+@media (max-width: 991.98px) {
+  .hall-feature { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; padding: 1.5rem; }
+  .hall-feature-media,
+  .hall-feature.is-reversed .hall-feature-media { order: 0; min-height: 0; height: 320px; }
+}
+@media (max-width: 575.98px) {
+  .hall-feature { padding: 1.15rem; }
+  .hall-feature-media { height: 240px; }
+  .hall-feature-title { font-size: 1.75rem; }
+  .hall-feature-actions { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 380px) {
+  .hall-specs { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Logo mark sizing on small screens */
+@media (max-width: 575.98px) {
+  .regalia-brand { gap: 0.6rem; }
+  .regalia-brand .brand-mark { width: 38px; height: 38px; }
+}
+
+/* Gallery: 3 equal columns on tablet, every tile the same 4:3 size */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .gallery-grid { gap: 18px; }
+}
+/* Gallery: one column on phones, identical 4:3 tiles */
+@media (max-width: 767.98px) {
+  .gallery-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+/* Touch screens have no hover, so captions stay visible along the bottom of each photo */
+@media (hover: none) {
+  .gallery-grid .gallery-item-overlay {
+    opacity: 1;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(to top, rgba(23, 20, 25, 0.85), rgba(23, 20, 25, 0) 65%);
+  }
+  .gallery-grid .gallery-item-title { font-size: 1.1rem; margin-bottom: 0.2rem; }
+}
+
+
+/* About page: stats, timeline and values on tablet + mobile */
+@media (max-width: 991.98px) {
+  .about-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .about-stat:nth-child(odd) { border-left: 0; }
+  .about-stat:nth-child(n+3) { border-top: 1px solid var(--border-dark); }
+  .about-timeline::before { left: 11px; transform: none; }
+  .timeline-item { grid-template-columns: minmax(0, 1fr); padding-left: 2.25rem; margin-bottom: 1.5rem; }
+  .timeline-item::before { left: 12px; }
+  .timeline-card,
+  .timeline-item:nth-child(even) .timeline-card { grid-column: 1; text-align: left; }
+}
+@media (max-width: 575.98px) {
+  .about-stat { padding: 1.1rem 0.5rem; }
+  .about-stat-label { font-size: 0.7rem; letter-spacing: 0.1em; }
+  .timeline-card { padding: 1.25rem; }
+}
+
+/* About values: stack image above the numbered rows on tablet + mobile */
+@media (max-width: 991.98px) {
+  .values-split { grid-template-columns: minmax(0, 1fr); }
+  .values-media { min-height: 0; height: 340px; }
+}
+@media (max-width: 575.98px) {
+  .values-media { height: 240px; }
+  .values-row { grid-template-columns: 3rem minmax(0, 1fr); column-gap: 1rem; padding: 1.25rem 0; }
+  .values-num { font-size: 1.8rem; }
+}
+
+
+/* Contact, Vision & Mission, Testimonials: tablet + mobile */
+@media (max-width: 991.98px) {
+  .contact-split { grid-template-columns: minmax(0, 1fr); }
+  .contact-visit-btn { margin-top: 0; }
+  .vm-grid { grid-template-columns: minmax(0, 1fr); }
+  .testi-section { padding: var(--section-space-sm) 0; }
+  .testi-grid { grid-template-columns: minmax(0, 1fr); max-width: 680px; margin: 0 auto; }
+}
+@media (max-width: 767.98px) {
+  .contact-tiles { grid-template-columns: minmax(0, 1fr); gap: 18px; max-width: 520px; margin: 0 auto; }
+  .contact-tile { padding: 1.5rem 1.25rem; }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contact-tiles { gap: 16px; }
+  .contact-tile { padding: 1.75rem 1rem; }
+  .contact-tile h4 { font-size: 1.05rem; }
+  .contact-tile p { font-size: 0.88rem; }
+}
+@media (max-width: 575.98px) {
+  .contact-visit-btn { width: 100%; justify-content: center; }
+  .testi-card { padding: 1.5rem 1.25rem; }
+  .testi-quote { font-size: 1.02rem; }
+}
+
+/* Packages: "Royal Signature" tag sits inside the card, left-aligned with the content, on phones (no overlap with the card above) */
+@media (max-width: 767.98px) {
+  .package-card { padding-top: 1.5rem; }
+  .package-card .package-badge-popular {
+    position: static;
+    transform: none;
+    align-self: flex-start;
+    display: inline-block;
+    max-width: 100%;
+    margin: 0 0 1.1rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+    line-height: 1.3;
+    letter-spacing: 0.14em;
+    white-space: nowrap;
+  }
+  .package-card.featured { box-shadow: var(--shadow-md); }
+}
+/* Packages on tablet: keep the tag straddling the top edge, with enough row space so it never touches the card above */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .row:has(> * > .package-card.featured) { row-gap: 2rem; }
+}
+
+/* Gallery filter buttons: equal-size, aligned grid on tablet and mobile */
+@media (max-width: 991.98px) {
+  .gallery-filters {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .gallery-filters .filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 0.6rem 0.75rem;
+    text-align: center;
+    white-space: normal;
+  }
+}
+/* Tablet: 3 buttons on the first row, 2 equal wider buttons on the second */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .gallery-filters { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .gallery-filters .filter-btn { grid-column: span 2; font-size: 0.82rem; }
+  .gallery-filters .filter-btn:nth-child(n+4) { grid-column: span 3; }
+}
+/* Mobile: "All Chronicles" full width, then a neat 2 x 2 grid */
+@media (max-width: 767.98px) {
+  .gallery-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-filters .filter-btn { font-size: 0.74rem; letter-spacing: 0.06em; }
+  .gallery-filters .filter-btn:first-child { grid-column: 1 / -1; }
+}
